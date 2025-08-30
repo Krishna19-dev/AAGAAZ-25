@@ -6,7 +6,134 @@
     <title>AAGAAZ'25 - Uniting Youth and Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel = "stylesheet" href = "/style.css">
+    <style>
+        /* AAGAAZ'25 GDG Theme Styles */
+/*Home page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+            color: #1c1c1c;
+        }
+
+        .gdg-theme {
+            background-color: #ffffff;
+        }
+
+        .gdg-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .gdg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gdg-blue { color: #4285F4; }
+        .gdg-red { color: #EA4335; }
+        .gdg-yellow { color: #FBBC05; }
+        .gdg-green { color: #34A853; }
+        .gdg-bg-blue { background-color: #4285F4; }
+        .gdg-bg-red { background-color: #EA4335; }
+        .gdg-bg-yellow { background-color: #FBBC05; }
+        .gdg-bg-green { background-color: #34A853; }
+        .border-gdg-blue { border-color: #4285F4; }
+        .border-gdg-red { border-color: #EA4335; }
+        .border-gdg-yellow { border-color: #FBBC05; }
+        .border-gdg-green { border-color: #34A853; }
+
+        .glow-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(66, 133, 244, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                background: white;
+                border-bottom: 1px solid #ddd;
+                padding: 1rem 0;
+            }
+
+            .mobile-menu.open {
+                display: flex;
+            }
+        }
+        
+        .card-shadow-red {
+            box-shadow: 0 10px 15px -3px rgba(234, 67, 53, 0.1), 0 4px 6px -2px rgba(234, 67, 53, 0.05);
+        }
+        .card-shadow-yellow {
+            box-shadow: 0 10px 15px -3px rgba(251, 188, 5, 0.1), 0 4px 6px -2px rgba(251, 188, 5, 0.05);
+        }
+        .card-shadow-green {
+            box-shadow: 0 10px 15px -3px rgba(52, 168, 83, 0.1), 0 4px 6px -2px rgba(52, 168, 83, 0.05);
+        }
+        .card-shadow-blue {
+             box-shadow: 0 10px 15px -3px rgba(66, 133, 244, 0.1), 0 4px 6px -2px rgba(66, 133, 244, 0.05);
+        }
+
+        /* Unique Hamburger Menu CSS */
+        .unique-menu-icon {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+        }
+
+        .unique-menu-icon span {
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background: #000;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .unique-menu-icon span:nth-child(1) {
+            top: 0px;
+        }
+
+        .unique-menu-icon span:nth-child(2) {
+            top: 15px;
+        }
+
+        .unique-menu-icon span:nth-child(3) {
+            top: 30px;
+        }
+
+        .unique-menu-icon.open span:nth-child(1) {
+            top: 15px;
+            transform: rotate(135deg);
+        }
+
+        .unique-menu-icon.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+
+        .unique-menu-icon.open span:nth-child(3) {
+            top: 15px;
+            transform: rotate(-135deg);
+        }
+    </style>
 </head>
 <body class="gdg-theme">
 
@@ -27,8 +154,12 @@
                 <a href="/register.html" class="hover:text-gdg-red transition-colors duration-300">Register</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
-                &#9776;
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <div class="unique-menu-icon" id="unique-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
         </nav>
         <!-- Mobile Menu -->
@@ -44,14 +175,15 @@
 
         <!-- Home Section -->
         <section id="home" class="relative min-h-screen flex items-center justify-center text-center p-4">
-            <div class="relative z-10 flex flex-col items-center">
+            <div class="relative z-10 flex flex-col items-center mt-20">
                 <div class="max-w-4xl mx-auto space-y-6">
                     <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight">
                         <span class="gdg-blue">A</span><span class="gdg-red">A</span><span class="gdg-yellow">G</span><span class="gdg-green">A</span><span class="gdg-blue">A</span><span class="gdg-red">Z</span><span class="gdg-yellow">'</span><span class="gdg-green">2</span><span class="gdg-blue">5</span>
                     </h1>
                     <p class="text-2xl md:text-3xl font-semibold text-gray-800">"Uniting Youth and Tech"</p>
-                    <p class="text-lg md:text-xl text-gray-600 font-medium">September 17–18, 2025 | Sage University Indore</p>
+                    <p class="text-lg md:text-xl text-gray-600 font-medium">September 17–18, 2025 | SAGE University Indore</p>
                     <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+                        <a href="https://forms.gle/KFzMipzuHYZ3J8GXA" class="px-8 py-3 gdg-bg-red text-white font-bold rounded-full shadow-lg glow-button">Register Now</a>
                         <a href="/event.html" class="px-8 py-3 gdg-bg-blue text-white font-bold rounded-full shadow-lg glow-button">Explore Events</a>
                     </div>
                 </div>
@@ -60,7 +192,7 @@
                 <div class="mt-20 w-full max-w-xl p-6 gdg-card rounded-xl shadow-xl transition-all duration-300">
                     <h2 class="text-2xl font-bold text-gray-800 mb-2">About AAGAAZ'25</h2>
                     <p class="text-gray-600 mt-4">
-                       AAGAAZ’25 is a 2-day, student-driven festival that celebrates innovation, collaboration, and cultural vibrancy. Organized by GDG Sage University Indore, the event is expected to bring together more than 500 students, startup founders, and industry leaders from across the region.
+                        AAGAAZ’25 is a 2-day, student-driven festival that celebrates innovation, collaboration, and cultural vibrancy. Organized by GDG SAGE University Indore, the event is expected to bring together more than 500 students, startup founders, and industry leaders from across the region.
                     </p>
                 </div>
                 
@@ -97,12 +229,12 @@
         <!-- About GDG Section -->
         <section id="about" class="min-h-screen flex items-center p-4 gdg-theme">
             <div class="container mx-auto max-w-3xl text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">About GDG Sage University Indore</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">About GDG SAGE University Indore</h2>
                 <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-4">
-                    Google Developer Groups (GDG) is a global community where developers and tech enthusiasts come together to learn, share, and collaborate on Google technologies. GDG Sage University Indore is an active and vibrant part of this ecosystem, dedicated to connecting students and professionals through events, workshops, and hackathons that foster learning and innovation.
+                    Google Developer Groups (GDG) is a global community where developers and tech enthusiasts come together to learn, share, and collaborate on Google technologies. GDG SAGE University Indore is an active and vibrant part of this ecosystem, dedicated to connecting students and professionals through events, workshops, and hackathons that foster learning and innovation.
                 </p>
                 <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-                    AAGAAZ’25 is the flagship initiative of GDG Sage University Indore, designed to empower youth through technology and innovation. The festival aims to create a platform where students can interact with industry experts, showcase their skills, and become part of a strong and collaborative tech community.
+                    AAGAAZ’25 is the flagship initiative of GDG SAGE University Indore, designed to empower youth through technology and innovation. The festival aims to create a platform where students can interact with industry experts, showcase their skills, and become part of a strong and collaborative tech community.
                 </p>
             </div>
         </section>
@@ -179,10 +311,28 @@
     </main>
 
     <footer class="bg-gray-100 text-center py-6 text-gray-500 text-sm">
-        <h1>&copy; 2025 AAGAAZ'25. All rights reserved.<br>Organized by GDG SUI | Sage University | Sunstone</h1>
+        <p>&copy; 2024 AAGAAZ'25. All rights reserved.<br>Organized by GDG SUI | SAGE University | Sunstone</p>
     </footer>
-    <script src="/script.js"></script>
 
-    
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a, nav a');
+        const uniqueIcon = document.getElementById('unique-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            uniqueIcon.classList.toggle('open');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    uniqueIcon.classList.remove('open');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
