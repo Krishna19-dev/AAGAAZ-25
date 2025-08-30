@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAGAAZ'25 - Uniting Youth and Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel = "stylesheet" href = "/style.css">
+</head>
+<body class="gdg-theme">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <!-- GDG Logo with Colors -->
+            <div class="flex items-center space-x-2">
+                <img src="/logo.jpg" alt="GDG Logo" class="rounded-full w-16 h-16">
+                <h1 class="text-3xl font-bold">
+                    <span class="gdg-blue">A</span><span class="gdg-red">A</span><span class="gdg-yellow">G</span><span class="gdg-green">A</span><span class="gdg-blue">A</span><span class="gdg-red">Z</span><span class="gdg-yellow">'</span><span class="gdg-green">2</span><span class="gdg-blue">5</span>
+                </h1>
+            </div>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="/index.html" class="hover:text-gdg-blue transition-colors duration-300">Home</a>
+                <a href="/about.html" class="hover:text-gdg-green transition-colors duration-300">About</a>
+                <a href="/event.html" class="hover:text-gdg-yellow transition-colors duration-300">Events</a>
+                <a href="/register.html" class="hover:text-gdg-red transition-colors duration-300">Register</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                &#9776;
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white text-center py-4 space-y-4 shadow-lg">
+            <a href="/index.html" class="block p-2 text-lg hover:text-gdg-blue">Home</a>
+            <a href="/about.html" class="block p-2 text-lg hover:text-gdg-green">About</a>
+            <a href="/event.html" class="block p-2 text-lg hover:text-gdg-yellow">Events</a>
+            <a href="/register.html" class="block p-2 text-lg hover:text-gdg-red">Register</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Home Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center text-center p-4">
+            <div class="relative z-10 flex flex-col items-center">
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight">
+                        <span class="gdg-blue">A</span><span class="gdg-red">A</span><span class="gdg-yellow">G</span><span class="gdg-green">A</span><span class="gdg-blue">A</span><span class="gdg-red">Z</span><span class="gdg-yellow">'</span><span class="gdg-green">2</span><span class="gdg-blue">5</span>
+                    </h1>
+                    <p class="text-2xl md:text-3xl font-semibold text-gray-800">"Uniting Youth and Tech"</p>
+                    <p class="text-lg md:text-xl text-gray-600 font-medium">September 17–18, 2025 | Sage University Indore</p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+                        <a href="/event.html" class="px-8 py-3 gdg-bg-blue text-white font-bold rounded-full shadow-lg glow-button">Explore Events</a>
+                    </div>
+                </div>
+
+                <!-- About Aagaaz'25 (Short) -->
+                <div class="mt-20 w-full max-w-xl p-6 gdg-card rounded-xl shadow-xl transition-all duration-300">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">About AAGAAZ'25</h2>
+                    <p class="text-gray-600 mt-4">
+                       AAGAAZ’25 is a 2-day, student-driven festival that celebrates innovation, collaboration, and cultural vibrancy. Organized by GDG Sage University Indore, the event is expected to bring together more than 500 students, startup founders, and industry leaders from across the region.
+                    </p>
+                </div>
+                
+                <!-- Highlights Section -->
+                <div class="mt-16 w-full max-w-5xl mx-auto p-6 gdg-card rounded-xl shadow-xl">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Highlights</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+                        <div class="gdg-card p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                            <span class="text-4xl gdg-blue">🚀</span>
+                            <h3 class="text-xl font-semibold mt-2 text-gray-800">Tech Talks & Workshops</h3>
+                        </div>
+                        <div class="gdg-card p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                            <span class="text-4xl gdg-red">💡</span>
+                            <h3 class="text-xl font-semibold mt-2 text-gray-800">Startup Pitch & MVP Showcase</h3>
+                        </div>
+                        <div class="gdg-card p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                            <span class="text-4xl gdg-yellow">🖥️</span>
+                            <h3 class="text-xl font-semibold mt-2 text-gray-800">Coding & Debugging Contests</h3>
+                        </div>
+                        <div class="gdg-card p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                            <span class="text-4xl gdg-green">🎤</span>
+                            <h3 class="text-xl font-semibold mt-2 text-gray-800">Cultural Evenings & Open Mic</h3>
+                        </div>
+                        <div class="gdg-card p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                            <span class="text-4xl gdg-blue">🎁</span>
+                            <h3 class="text-xl font-semibold mt-2 text-gray-800">Goodies, Networking, Experience Zones</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About GDG Section -->
+        <section id="about" class="min-h-screen flex items-center p-4 gdg-theme">
+            <div class="container mx-auto max-w-3xl text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">About GDG Sage University Indore</h2>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-4">
+                    Google Developer Groups (GDG) is a global community where developers and tech enthusiasts come together to learn, share, and collaborate on Google technologies. GDG Sage University Indore is an active and vibrant part of this ecosystem, dedicated to connecting students and professionals through events, workshops, and hackathons that foster learning and innovation.
+                </p>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    AAGAAZ’25 is the flagship initiative of GDG Sage University Indore, designed to empower youth through technology and innovation. The festival aims to create a platform where students can interact with industry experts, showcase their skills, and become part of a strong and collaborative tech community.
+                </p>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="min-h-screen p-4 gdg-theme">
+            <div class="container mx-auto py-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 text-center">Events</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="gdg-card rounded-xl p-6 shadow-xl border border-gdg-blue transition-all duration-300 hover:scale-105 card-shadow-blue">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-4 gdg-blue">🗣️</span>
+                            <h3 class="text-2xl font-semibold text-gray-800">Tech Talks & Workshops</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Learn about the latest trends in AI, Machine Learning, Web Development, and Cloud Computing directly from top industry experts. Enhance your practical skills through hands-on workshops.
+                        </p>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="gdg-card rounded-xl p-6 shadow-xl border border-gdg-red transition-all duration-300 hover:scale-105 card-shadow-red">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-4 gdg-red">🚀</span>
+                            <h3 class="text-2xl font-semibold text-gray-800">Startup Pitch & MVP Showcase</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Showcase your innovative startup ideas and MVPs (Minimum Viable Products) in front of mentors and investors. A golden chance to take your venture to the next level.
+                        </p>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="gdg-card rounded-xl p-6 shadow-xl border border-gdg-yellow transition-all duration-300 hover:scale-105 card-shadow-yellow">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-4 gdg-yellow">⌨️</span>
+                            <h3 class="text-2xl font-semibold text-gray-800">Coding & Debugging Contests</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Test your coding skills with challenging problems and fast-paced debugging contests. The perfect arena for coding enthusiasts to prove their talent.
+                        </p>
+                    </div>
+                    <!-- Event Card 4 -->
+                    <div class="gdg-card rounded-xl p-6 shadow-xl border border-gdg-green transition-all duration-300 hover:scale-105 card-shadow-green">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-4 gdg-green">🎶</span>
+                            <h3 class="text-2xl font-semibold text-gray-800">Cultural Evenings & Open Mic</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Beyond tech, enjoy vibrant cultural performances and showcase your hidden talents at the open mic sessions.
+                        </p>
+                    </div>
+                    <!-- Event Card 5 -->
+                    <div class="gdg-card rounded-xl p-6 shadow-xl border border-gdg-blue transition-all duration-300 hover:scale-105 card-shadow-blue">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-4 gdg-blue">🎁</span>
+                            <h3 class="text-xl font-semibold mt-2 text-gray-800">Goodies & Experience Zones</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Get exciting swags and goodies while exploring interactive experience zones featuring VR demos, gaming booths, and startup displays.
+                        </p>
+                    </div>
+                    <!-- Event Card 6 -->
+                    <div class="gdg-card rounded-xl p-6 shadow-xl border border-gdg-red transition-all duration-300 hover:scale-105 card-shadow-red">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-4 gdg-red">🤝</span>
+                            <h3 class="text-2xl font-semibold text-gray-800">Networking</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Build valuable connections with students, founders, industry leaders, and the GDG community, expanding your professional network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-100 text-center py-6 text-gray-500 text-sm">
+        <h1>&copy; 2025 AAGAAZ'25. All rights reserved.<br>Organized by GDG SUI | Sage University | Sunstone</h1>
+    </footer>
+    <script src="/script.js"></script>
+
+    
+</body>
+</html>
