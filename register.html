@@ -6,8 +6,92 @@
     <title>AAGAAZ'25 - Register</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel = "stylesheet" href = "/style.css">
-    
+    <style>
+        /* AAGAAZ'25 GDG Theme Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+            color: #1c1c1c;
+        }
+
+        .gdg-theme {
+            background-color: #ffffff;
+        }
+
+        .gdg-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .gdg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gdg-blue { color: #4285F4; }
+        .gdg-red { color: #EA4335; }
+        .gdg-yellow { color: #FBBC05; }
+        .gdg-green { color: #34A853; }
+        .gdg-bg-blue { background-color: #4285F4; }
+        .gdg-bg-red { background-color: #EA4335; }
+        .gdg-bg-yellow { background-color: #FBBC05; }
+        .gdg-bg-green { background-color: #34A853; }
+        .border-gdg-blue { border-color: #4285F4; }
+        .border-gdg-red { border-color: #EA4335; }
+        .border-gdg-yellow { border-color: #FBBC05; }
+        .border-gdg-green { border-color: #34A853; }
+        
+        /* Unique Hamburger Menu CSS */
+        .unique-menu-icon {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+        }
+
+        .unique-menu-icon span {
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background: #000;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .unique-menu-icon span:nth-child(1) {
+            top: 0px;
+        }
+
+        .unique-menu-icon span:nth-child(2) {
+            top: 15px;
+        }
+
+        .unique-menu-icon span:nth-child(3) {
+            top: 30px;
+        }
+
+        .unique-menu-icon.open span:nth-child(1) {
+            top: 15px;
+            transform: rotate(135deg);
+        }
+
+        .unique-menu-icon.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+
+        .unique-menu-icon.open span:nth-child(3) {
+            top: 15px;
+            transform: rotate(-135deg);
+        }
+    </style>
 </head>
 <body class="gdg-theme">
 
@@ -22,21 +106,25 @@
                 </h1>
             </div>
             <div class="hidden md:flex space-x-8 text-lg">
-                <a href="/index.html" class="hover:text-gdg-blue transition-colors duration-300">Home</a>
-                <a href="/about.html" class="hover:text-gdg-green transition-colors duration-300">About</a>
-                <a href="/event.html" class="hover:text-gdg-yellow transition-colors duration-300">Events</a>
-                <a href="/register.html" class="hover:text-gdg-red transition-colors duration-300">Register</a>
+                <a href="/index2.html" class="hover:text-gdg-blue transition-colors duration-300">Home</a>
+                <a href="/about2.html" class="hover:text-gdg-green transition-colors duration-300">About</a>
+                <a href="/events2.html" class="hover:text-gdg-yellow transition-colors duration-300">Events</a>
+                <a href="/register2.html" class="hover:text-gdg-red transition-colors duration-300">Register</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
-                &#9776;
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                <div class="unique-menu-icon" id="unique-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu md:hidden bg-white text-center py-4 space-y-4 shadow-lg">
             <a href="/index.html" class="block p-2 text-lg hover:text-gdg-blue">Home</a>
             <a href="/about.html" class="block p-2 text-lg hover:text-gdg-green">About</a>
-            <a href="/event.html" class="block p-2 text-lg hover:text-gdg-yellow">Events</a>
+            <a href="/events.html" class="block p-2 text-lg hover:text-gdg-yellow">Events</a>
             <a href="/register.html" class="block p-2 text-lg hover:text-gdg-red">Register</a>
         </div>
     </header>
@@ -53,7 +141,7 @@
                             Join AAGAAZ’25 – The Youth & Tech Fest. Network with innovators, attend sessions, enjoy cultural evenings, and grab exciting goodies.
                         </p>
                         <a href="https://forms.gle/KFzMipzuHYZ3J8GXA" class="block w-full text-center px-4 py-3 gdg-bg-blue text-white font-bold rounded-lg shadow-lg hover:bg-blue-600">
-                           Register for AAGAAZ'25 Now
+                            Register for AAGAAZ'25 Now
                         </a>
                     </div>
                 </div>
@@ -62,15 +150,15 @@
                 <div class="mt-16 w-full max-w-6xl mx-auto p-8 gdg-card rounded-xl shadow-xl border border-gray-200">
                     <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Important Notes for Participants</h3>
                     <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
-                        <li>Each event has **limited seats** — first come, first served.</li>
-                        <li>Certificates will be provided for select workshops & MUN.</li>
-                        <li>Bring your **student ID card** for entry.</li>
+                        <li>Each event has <strong>Limited seats</strong> — first come, first served.</li>
+                        <li>Certificates will be provided for select workshops.</li>
+                        <li>Bring your <strong>Student Id card</strong> for entry.</li>
                         <li>For queries: 📧 <a href="mailto:gdgsage2024@gmail.com" class="gdg-blue hover:underline">gdgsage2024@gmail.com</a></li>
                     </ul>
                     <div class="text-center mt-8">
                         <p class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Don’t miss out — Join 500+ participants at AAGAAZ’25!</p>
                         <a href="https://forms.gle/KFzMipzuHYZ3J8GXA" class="px-8 py-3 gdg-bg-blue text-white font-bold rounded-full shadow-lg hover:bg-blue-600">
-                           Register for Your Events Now
+                            Register Now
                         </a>
                     </div>
                 </div>
@@ -79,8 +167,27 @@
     </main>
 
     <footer class="bg-gray-100 text-center py-6 text-gray-500 text-sm">
-        <p>&copy; 2024 AAGAAZ'25. All rights reserved.<br>Organized by GDG SUI | Sage University | Sunstone</p>
+        <p>&copy; 2024 AAGAAZ'25. All rights reserved.<br>Organized by GDG SUI | SAGE University | Sunstone</p>
     </footer>
-    <sript src="/script.js"></sript>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a, nav a');
+        const uniqueIcon = document.getElementById('unique-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            uniqueIcon.classList.toggle('open');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    uniqueIcon.classList.remove('open');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
